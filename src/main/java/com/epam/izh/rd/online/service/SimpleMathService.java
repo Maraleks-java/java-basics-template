@@ -50,7 +50,11 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int sum(int[] values) {
-        return -1;
+        int sum = 0;
+        for(int i = 0; i < values.length; i++){
+            sum += values[i];
+        }
+        return sum;
     }
 
     /**
