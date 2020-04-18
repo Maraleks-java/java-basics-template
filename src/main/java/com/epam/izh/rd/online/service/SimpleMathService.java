@@ -41,7 +41,11 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int maxFrom(int[] values) {
-        return -1;
+        int max = values[0];
+        for (int i = 1; i < values.length; i++){
+            max = maxFrom(max, values[i]);
+        }
+        return max;
     }
 
     /**
