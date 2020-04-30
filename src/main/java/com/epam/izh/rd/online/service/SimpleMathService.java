@@ -77,7 +77,10 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public long calcFactorial(int initialVal) {
-        return -1L;
+        if(initialVal <= 0 || initialVal <= 1){
+            return 1;
+        }
+        return initialVal*calcFactorial(initialVal-1);
     }
 
     /**
