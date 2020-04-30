@@ -95,7 +95,10 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public long calcFibonacci(int number) {
-        return -1L;
+        if(number < 2){
+            return number;
+        }
+        return calcFibonacci(number - 1 ) + calcFibonacci(number - 2);
     }
 
     /**
