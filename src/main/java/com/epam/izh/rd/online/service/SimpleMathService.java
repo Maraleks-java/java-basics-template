@@ -137,6 +137,14 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int[] reverseArray(int[] values) {
-        return new int[]{};
+        int leftHandSide = 0;
+        int size;
+        for(int rightHandSide = values.length-1; leftHandSide != values.length/2; rightHandSide--){
+           size = values[leftHandSide];
+           values[leftHandSide] = values[rightHandSide];
+           values[rightHandSide] = size;
+           leftHandSide++;
+        }
+        return values;
     }
 }
