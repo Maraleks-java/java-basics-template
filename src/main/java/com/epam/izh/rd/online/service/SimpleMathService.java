@@ -124,7 +124,10 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public boolean isPrimary(int number) {
-        return false;
+        if(number != 2 && (number%2 == 0 || number%3 == 0)){
+            return false;
+        }
+        return true;
     }
 
     /**
